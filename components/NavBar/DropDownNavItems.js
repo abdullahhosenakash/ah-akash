@@ -3,11 +3,10 @@
 import { faBars, faX } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useState } from 'react';
-import CustomLink from './CustomLink';
+import CustomLink from '@/components/NavBar/CustomLink';
 
-const ToggleBarIcon = () => {
+const DropDownNavItems = () => {
   const [toggle, setToggle] = useState(false);
-  console.log(toggle);
   return (
     <>
       {toggle ? (
@@ -42,4 +41,4 @@ const ToggleBarIcon = () => {
   );
 };
 
-export default ToggleBarIcon;
+export default DropDownNavItems;

@@ -1,6 +1,6 @@
 import Link from 'next/link';
-import CustomLink from '@/components/CustomLink';
-import ToggleBarIcon from '@/components/DropDownNavItems';
+import CustomLink from '@/components/NavBar/CustomLink';
+import DropDownNavItems from '@/components/NavBar/DropDownNavItems';
 
 const Navbar = () => {
   return (
@@ -13,7 +13,7 @@ const Navbar = () => {
         </li>
         <li>
           <div className='lg:hidden'>
-            <ToggleBarIcon />
+            <DropDownNavItems />
           </div>
           <ul className='hidden lg:flex gap-8 text-slate-400 text-lg'>
             <li>

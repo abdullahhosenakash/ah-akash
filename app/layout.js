@@ -1,5 +1,5 @@
 import '@/app/globals.css';
-import Navbar from '@/components/Navbar';
+import Navbar from '@/components/NavBar/Navbar';
 
 export const metadata = {
   title: 'Abdullah Hosen Akash',
