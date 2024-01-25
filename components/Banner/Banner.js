@@ -12,10 +12,10 @@ const Banner = () => {
         priority={true}
       />
       <div>
-        <h3 className='text-xl uppercase text-yellow-400'>Hello, I am</h3>
-        <h2 className='lg:text-7xl text-6xl text-white'>
-          Abdullah Hosen <br /> Akash
-        </h2>
+        <h3 className='text-xl uppercase text-yellow-400'>
+          Hello, my name is Akash
+        </h3>
+        <h2 className='lg:text-7xl text-6xl text-white'>I make websites.</h2>
         <p className='text-3xl mt-4 text-white'>
           I am a full stack developer. <br /> I love to code
           <TextStateForBanner />

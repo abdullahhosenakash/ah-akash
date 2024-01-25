@@ -11,8 +11,7 @@ const CustomLink = ({ href }) => {
       href={href}
       className={`hover:text-yellow-400 ${
         pathname === href ? 'text-yellow-400 border-b-2 border-yellow-400' : ''
-      }
-                `}
+      }`}
     >
       {href.split('/')[1]}
     </Link>
