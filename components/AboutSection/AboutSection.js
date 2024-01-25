@@ -11,7 +11,7 @@ const AboutSection = () => {
         backend using JS. I have graduated with a bachelor&apos;s degree in
         Electronic and Communication Engineering from Hajee Mohammad Danesh
         Science and Technology University, Dinajpur in 2024. I am always free
-        for any kind of jobs that suits my interests.
+        for any kind of job opportunity that suits my interests.
       </p>
       <Link href='/about' className='text-lg text-yellow-400 hover:underline'>
         More about me
