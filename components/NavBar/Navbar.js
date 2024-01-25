@@ -7,7 +7,7 @@ const Navbar = () => {
     <nav className='lg:px-20 px-4 py-6 uppercase bg-slate-800'>
       <ul className='flex justify-between items-center'>
         <li>
-          <Link href='/' className='text-yellow-400 font-bold text-xl'>
+          <Link href='/' className='text-yellow-400 font-bold text-2xl'>
             Abdullah Hosen Akash
           </Link>
         </li>
