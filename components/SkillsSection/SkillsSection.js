@@ -1,6 +1,10 @@
 'use client';
 
 import { useState } from 'react';
+import WebSkills from '@/components/SkillsSection/WebSkills';
+import ProgrammingSkills from './ProgrammingSkills';
+import ToolsSkills from './ToolsSkills';
+import LanguageSkills from './LanguageSkills';
 
 const SkillsSection = () => {
   const [selectedSkills, setSelectedSkills] = useState('web');
@@ -32,7 +36,19 @@ const SkillsSection = () => {
         >
           Tools
         </button>
+        <button
+          className={`px-3 py-1 border-2 border-yellow-400 rounded-md ${
+            selectedSkills === 'language' && 'bg-yellow-400 text-black'
+          }`}
+          onClick={() => setSelectedSkills('language')}
+        >
+          Language
+        </button>
       </div>
+      {selectedSkills === 'web' && <WebSkills />}
+      {selectedSkills === 'programming' && <ProgrammingSkills />}
+      {selectedSkills === 'tools' && <ToolsSkills />}
+      {selectedSkills === 'language' && <LanguageSkills />}
     </section>
   );
 };
