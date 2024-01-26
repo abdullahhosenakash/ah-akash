@@ -10,7 +10,7 @@ const SkillsTemplate = ({ skills }) => {
                 <span>{skill.percentage}</span>
               </div>{' '}
               <span
-                className={`block w-[${skill.percentage}] absolute bottom-0 left-0 border-b-8 border-yellow-400 rounded-lg`}
+                className={`block w-[90%] absolute bottom-0 left-0 border-b-8 border-yellow-400 rounded-lg`}
               />
             </div>
           </div>
