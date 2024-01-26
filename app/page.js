@@ -4,7 +4,7 @@ import SkillsSection from '@/components/SkillsSection/SkillsSection';
 
 export default function Home() {
   return (
-    <main className='lg:px-20 px-4'>
+    <main className='lg:px-20 px-3'>
       <Banner />
       <section className='grid grid-cols-1 lg:grid-cols-2 gap-8 mt-12'>
         <AboutSection />

@@ -26,7 +26,7 @@ const SkillsSection = () => {
       },
       {
         skillName: 'MongoDB',
-        percentage: '75%%'
+        percentage: '75%'
       }
     ],
     programmingSkills: [
