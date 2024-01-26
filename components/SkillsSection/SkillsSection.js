@@ -3,71 +3,71 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import SkillsTemplate from '@/components/SkillsSection/SkillsTemplate';
-
+const skills = {
+  webSkills: [
+    {
+      skillName: 'React JS',
+      percentage: '90%'
+    },
+    {
+      skillName: 'Next.JS',
+      percentage: '40%'
+    },
+    {
+      skillName: 'Express JS',
+      percentage: '70%'
+    },
+    {
+      skillName: 'Node JS',
+      percentage: '60%'
+    },
+    {
+      skillName: 'MongoDB',
+      percentage: '70%'
+    }
+  ],
+  programmingSkills: [
+    {
+      skillName: 'JavaScript',
+      percentage: '90%'
+    },
+    {
+      skillName: 'C',
+      percentage: '80%'
+    },
+    {
+      skillName: 'Java',
+      percentage: '30%'
+    }
+  ],
+  toolsSkills: [
+    {
+      skillName: 'Git',
+      percentage: '60%'
+    },
+    {
+      skillName: 'Microsoft Office',
+      percentage: '70%'
+    }
+  ],
+  languageSkills: [
+    {
+      skillName: 'বাংলা (Bangla)',
+      percentage: '100%'
+    },
+    {
+      skillName: 'English',
+      percentage: '80%'
+    },
+    {
+      skillName: 'Hindi',
+      percentage: '50%'
+    }
+  ]
+};
 const SkillsSection = () => {
   const [selectedSkills, setSelectedSkills] = useState('web');
-  const skills = {
-    webSkills: [
-      {
-        skillName: 'React JS',
-        percentage: '90%'
-      },
-      {
-        skillName: 'Next.JS',
-        percentage: '40%'
-      },
-      {
-        skillName: 'Express JS',
-        percentage: '70%'
-      },
-      {
-        skillName: 'Node JS',
-        percentage: '60%'
-      },
-      {
-        skillName: 'MongoDB',
-        percentage: '75%'
-      }
-    ],
-    programmingSkills: [
-      {
-        skillName: 'JavaScript',
-        percentage: '90%'
-      },
-      {
-        skillName: 'C',
-        percentage: '80%'
-      },
-      {
-        skillName: 'Java',
-        percentage: '30%'
-      }
-    ],
-    toolsSkills: [
-      {
-        skillName: 'Git',
-        percentage: '75%'
-      },
-      {
-        skillName: 'Microsoft Office',
-        percentage: '70%'
-      }
-    ],
-    languageSkills: [
-      {
-        skillName: 'বাংলা (Bangla)',
-        percentage: '100%'
-      },
-      {
-        skillName: 'English',
-        percentage: '80%'
-      },
-      {
-        skillName: 'Hindi',
-        percentage: '50%'
-      }
-    ]
-  };
+
   return (
     <section className='relative'>
       <h3 className='text-2xl border-b-2 border-yellow-400 w-fit'>My Skills</h3>
