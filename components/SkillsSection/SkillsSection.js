@@ -1,14 +1,73 @@
 'use client';
 
 import { useState } from 'react';
-import WebSkills from '@/components/SkillsSection/WebSkills';
-import ProgrammingSkills from './ProgrammingSkills';
-import ToolsSkills from './ToolsSkills';
-import LanguageSkills from './LanguageSkills';
 import Link from 'next/link';
+import SkillsTemplate from '@/components/SkillsSection/SkillsTemplate';
 
 const SkillsSection = () => {
   const [selectedSkills, setSelectedSkills] = useState('web');
+  const skills = {
+    webSkills: [
+      {
+        skillName: 'React JS',
+        percentage: '90%'
+      },
+      {
+        skillName: 'Next.JS',
+        percentage: '40%'
+      },
+      {
+        skillName: 'Express JS',
+        percentage: '70%'
+      },
+      {
+        skillName: 'Node JS',
+        percentage: '60%'
+      },
+      {
+        skillName: 'MongoDB',
+        percentage: '75%%'
+      }
+    ],
+    programmingSkills: [
+      {
+        skillName: 'JavaScript',
+        percentage: '90%'
+      },
+      {
+        skillName: 'C',
+        percentage: '80%'
+      },
+      {
+        skillName: 'Java',
+        percentage: '30%'
+      }
+    ],
+    toolsSkills: [
+      {
+        skillName: 'Git',
+        percentage: '75%'
+      },
+      {
+        skillName: 'Microsoft Office',
+        percentage: '70%'
+      }
+    ],
+    languageSkills: [
+      {
+        skillName: 'বাংলা (Bangla)',
+        percentage: '100%'
+      },
+      {
+        skillName: 'English',
+        percentage: '80%'
+      },
+      {
+        skillName: 'Hindi',
+        percentage: '50%'
+      }
+    ]
+  };
   return (
     <section className='relative'>
       <h3 className='text-2xl border-b-2 border-yellow-400 w-fit'>My Skills</h3>
@@ -46,10 +105,16 @@ const SkillsSection = () => {
           Language
         </button>
       </div>
-      {selectedSkills === 'web' && <WebSkills />}
-      {selectedSkills === 'programming' && <ProgrammingSkills />}
-      {selectedSkills === 'tools' && <ToolsSkills />}
-      {selectedSkills === 'language' && <LanguageSkills />}
+      {selectedSkills === 'web' && <SkillsTemplate skills={skills.webSkills} />}
+      {selectedSkills === 'programming' && (
+        <SkillsTemplate skills={skills.programmingSkills} />
+      )}
+      {selectedSkills === 'tools' && (
+        <SkillsTemplate skills={skills.toolsSkills} />
+      )}
+      {selectedSkills === 'language' && (
+        <SkillsTemplate skills={skills.languageSkills} />
+      )}
       <Link
         href='/skills'
         className='text-lg text-yellow-400 hover:underline lg:absolute lg:bottom-0'
