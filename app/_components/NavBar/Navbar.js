@@ -1,6 +1,6 @@
 import Link from 'next/link';
-import CustomLink from '@/components/NavBar/CustomLink';
-import DropDownNavItems from '@/components/NavBar/DropDownNavItems';
+import CustomLink from '@/app/_components/NavBar/CustomLink';
+import DropDownNavItems from '@/app/_components/NavBar/DropDownNavItems';
 
 const Navbar = () => {
   return (

@@ -1,8 +1,8 @@
 'use client';
 
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import Link from 'next/link';
-import SkillsTemplate from '@/components/SkillsSection/SkillsTemplate';
+import SkillsTemplate from '@/app/_components/SkillsSection/SkillsTemplate';
 const skills = {
   webSkills: [
     {

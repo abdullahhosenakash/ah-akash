@@ -1,6 +1,7 @@
-import AboutSection from '@/components/AboutSection/AboutSection';
-import Banner from '@/components/Banner/Banner';
-import SkillsSection from '@/components/SkillsSection/SkillsSection';
+import AboutSection from '@/app/_components/AboutSection/AboutSection';
+import Banner from '@/app/_components/Banner/Banner';
+import SkillsSection from '@/app/_components/SkillsSection/SkillsSection';
+import Projects from '@/app/projects/page';
 
 export default function Home() {
   return (
@@ -10,6 +11,7 @@ export default function Home() {
         <AboutSection />
         <SkillsSection />
       </section>
+      <Projects />
     </main>
   );
 }

@@ -1,5 +1,4 @@
 const SkillsTemplate = ({ skills }) => {
-  const width = '1/2';
   return (
     <div className='h-[21.6rem] lg:h-fit lg:border-0 border border-yellow-400 rounded-md p-2 lg:p-0 mt-2 lg:mt-0'>
       <div className='grid grid-cols-1 lg:grid-cols-2 gap-3 lg:mt-2'>

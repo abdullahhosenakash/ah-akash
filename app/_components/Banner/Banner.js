@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import img from '@/public/akash.png';
-import TextStateForBanner from '@/components/Banner/TextStateForBanner';
+import TextStateForBanner from '@/app/_components/Banner/TextStateForBanner';
 
 const Banner = () => {
   return (
