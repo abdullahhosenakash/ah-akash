@@ -6,7 +6,9 @@ export default function NotFound() {
       <h2 className='text-3xl text-red-500'>
         Sorry, the requested resource was not found
       </h2>
-      <Link href='/'>Return Home</Link>
+      <Link href='/' className='text-yellow-400 hover:underline text-lg'>
+        Return Home
+      </Link>
     </div>
   );
 }
