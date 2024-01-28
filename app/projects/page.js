@@ -1,8 +1,8 @@
-import getProjects from '../lib/getProjects';
-import Project from './Project';
+import Project from '@/app/projects/Project';
+import getProjects from '@/app/lib/getProjects';
 
 const Projects = async () => {
-  const { projects } = await getProjects();
+  const projects = await getProjects();
   return (
     <section className='lg:px-20 px-3 mt-6'>
       <h2 className='text-2xl border-b-2 border-yellow-400 w-fit mx-auto'>
