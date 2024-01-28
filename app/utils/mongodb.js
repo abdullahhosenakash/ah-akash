@@ -1,14 +1,46 @@
-import { MongoClient, ServerApiVersion } from 'mongodb';
+// import { MongoClient, ServerApiVersion } from 'mongodb';
 
-const client = new MongoClient(process.env.MONGODB_URI, {
-  serverApi: {
-    version: ServerApiVersion.v1,
-    strict: true,
-    deprecationErrors: true
+// const client = new MongoClient(process.env.MONGODB_URI, {
+//   serverApi: {
+//     version: ServerApiVersion.v1,
+//     strict: true,
+//     deprecationErrors: true
+//   }
+// });
+
+// client.connect();
+// const db = client.db('ahAkashPortfolio');
+// const projectsCollection = db.collection('projects');
+// export default projectsCollection;
+
+// mongodb.js
+
+import { MongoClient } from 'mongodb';
+
+const uri = process.env.MONGODB_URI;
+const options = {
+  useUnifiedTopology: true,
+  useNewUrlParser: true
+};
+
+let client;
+let clientPromise;
+
+if (!process.env.MONGODB_URI) {
+  throw new Error('Add Mongo URI to .env.local');
+}
+
+if (process.env.NODE_ENV === 'development') {
+  if (!global._mongoClientPromise) {
+    client = new MongoClient(uri, options);
+    global._mongoClientPromise = client.connect();
   }
-});
+  clientPromise = global._mongoClientPromise;
+} else {
+  client = new MongoClient(uri, options);
+  clientPromise = client.connect();
+}
 
-client.connect();
 const db = client.db('ahAkashPortfolio');
 const projectsCollection = db.collection('projects');
 export default projectsCollection;
