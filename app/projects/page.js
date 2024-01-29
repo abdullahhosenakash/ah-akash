@@ -1,18 +1,9 @@
-'use client';
-
 import Project from '@/app/projects/Project';
-import { useEffect, useState } from 'react';
 
-const Projects = () => {
-  const [projects, setProjects] = useState([]);
-  useEffect(() => {
-    const getProjects = async () => {
-      const response = await fetch('/api/projects');
-      const result = await response.json();
-      setProjects(result);
-    };
-    getProjects();
-  }, []);
+const Projects = async () => {
+  const projectsPromise = await import('@/app/api/projects/route');
+  const response = await projectsPromise.GET();
+  const projects = await response.json();
   return (
     <section className='lg:px-20 px-3 mt-6'>
       <h2 className='text-2xl border-b-2 border-yellow-400 w-fit mx-auto'>
