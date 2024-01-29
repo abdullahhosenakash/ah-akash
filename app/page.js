@@ -5,13 +5,13 @@ import Projects from '@/app/projects/page';
 
 export default function Home() {
   return (
-    <main className='lg:px-20 px-3'>
+    <main>
       <Banner />
-      <section className='grid grid-cols-1 lg:grid-cols-2 gap-8 mt-12'>
+      <section className='grid grid-cols-1 lg:grid-cols-2 gap-8 mt-12 lg:px-20 px-2'>
         <AboutSection />
         <SkillsSection />
       </section>
-      <Projects />
+      <Projects from='homepage' />
     </main>
   );
 }

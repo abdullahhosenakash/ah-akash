@@ -4,7 +4,7 @@ import TextStateForBanner from '@/app/_components/Banner/TextStateForBanner';
 
 const Banner = () => {
   return (
-    <section className='mt-6 flex flex-col lg:flex-row-reverse gap-4 lg:gap-0 justify-evenly items-center'>
+    <section className='mt-6 flex flex-col lg:flex-row-reverse gap-3 lg:gap-0 justify-evenly items-center lg:px-20 px-2'>
       <Image
         src={img}
         alt='Abdullah Hosen Akash image'

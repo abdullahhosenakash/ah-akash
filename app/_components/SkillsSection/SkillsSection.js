@@ -70,8 +70,10 @@ const SkillsSection = () => {
 
   return (
     <section className='relative'>
-      <h3 className='text-2xl border-b-2 border-yellow-400 w-fit'>My Skills</h3>
-      <div className='flex flex-wrap gap-4 mt-3 text-lg'>
+      <h3 className='text-2xl border-b-2 border-yellow-400 w-fit mx-auto lg:mx-0'>
+        My Skills
+      </h3>
+      <div className='lg:flex grid grid-cols-2 lg:gap-4 gap-2 mt-3 text-lg'>
         <button
           className={`px-3 py-1 border-2 border-yellow-400 rounded-md ${
             selectedSkills === 'web' && 'bg-yellow-400 text-black'

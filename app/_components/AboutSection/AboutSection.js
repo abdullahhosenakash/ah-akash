@@ -3,7 +3,9 @@ import Link from 'next/link';
 const AboutSection = () => {
   return (
     <section>
-      <h3 className='text-2xl border-b-2 border-yellow-400 w-fit'>About Me</h3>
+      <h3 className='text-2xl border-b-2 border-yellow-400 w-fit mx-auto lg:mx-0'>
+        About Me
+      </h3>
       <p className='text-justify text-lg mt-2'>
         I am Abdullah Hosen Akash, a passionate web developer. I develop web
         applications using JavaScript as my core skill is based on it. As a
