@@ -32,7 +32,7 @@ const Project = ({ project }) => {
       </p>
       <Link
         href={`/projects/${project._id}`}
-        className='block p-3 text-center bg-slate-700 hover:bg-slate-600 transition text-yellow-400 rounded-lg'
+        className='block p-3 text-center bg-slate-700 hover:bg-slate-600 transition text-yellow-400 rounded-md'
       >
         Details
       </Link>

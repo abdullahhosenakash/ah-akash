@@ -15,7 +15,11 @@ const Projects = async ({ from }) => {
   }
 
   return (
-    <section className='lg:px-20 px-2 lg:mt-6 mt-3 mb-6'>
+    <section
+      className={`lg:px-20 px-2 lg:mt-6 mt-3 mb-6 ${
+        from === 'homepage' && 'lg:mt-10'
+      }`}
+    >
       <h2 className='text-2xl border-b-2 border-yellow-400 w-fit mx-auto'>
         My Projects
       </h2>
@@ -27,7 +31,7 @@ const Projects = async ({ from }) => {
       {from === 'homepage' && (
         <Link
           href='/projects'
-          className='block bg-slate-700 text-yellow-400 hover:bg-slate-600 hover:underline px-12 py-4 w-fit mx-auto mt-3 rounded-lg capitalize'
+          className='block bg-slate-700 text-yellow-400 hover:bg-slate-600 hover:underline lg:px-12 px-6 py-3 w-fit mx-auto mt-3 rounded-lg capitalize'
         >
           View all projects
         </Link>

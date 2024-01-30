@@ -1,70 +1,11 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import Link from 'next/link';
 import SkillsTemplate from '@/app/_components/SkillsSection/SkillsTemplate';
-const skills = {
-  webSkills: [
-    {
-      skillName: 'React JS',
-      percentage: '90%'
-    },
-    {
-      skillName: 'Next.JS',
-      percentage: '40%'
-    },
-    {
-      skillName: 'Express JS',
-      percentage: '70%'
-    },
-    {
-      skillName: 'Node JS',
-      percentage: '60%'
-    },
-    {
-      skillName: 'MongoDB',
-      percentage: '70%'
-    }
-  ],
-  programmingSkills: [
-    {
-      skillName: 'JavaScript',
-      percentage: '90%'
-    },
-    {
-      skillName: 'C',
-      percentage: '80%'
-    },
-    {
-      skillName: 'Java',
-      percentage: '30%'
-    }
-  ],
-  toolsSkills: [
-    {
-      skillName: 'Git',
-      percentage: '60%'
-    },
-    {
-      skillName: 'Microsoft Office',
-      percentage: '70%'
-    }
-  ],
-  languageSkills: [
-    {
-      skillName: 'বাংলা (Bangla)',
-      percentage: '100%'
-    },
-    {
-      skillName: 'English',
-      percentage: '80%'
-    },
-    {
-      skillName: 'Hindi',
-      percentage: '50%'
-    }
-  ]
-};
+import SkillsSelectionButton from './SkillsSelectionButton';
+import skills from '@/app/utils/skills';
+
 const SkillsSection = () => {
   const [selectedSkills, setSelectedSkills] = useState('web');
 
@@ -74,49 +15,24 @@ const SkillsSection = () => {
         My Skills
       </h3>
       <div className='lg:flex grid grid-cols-2 lg:gap-4 gap-2 mt-3 text-lg'>
-        <button
-          className={`px-3 py-1 border-2 border-yellow-400 rounded-md ${
-            selectedSkills === 'web' && 'bg-yellow-400 text-black'
-          }`}
-          onClick={() => setSelectedSkills('web')}
-        >
-          Web
-        </button>
-        <button
-          className={`px-3 py-1 border-2 border-yellow-400 rounded-md ${
-            selectedSkills === 'programming' && 'bg-yellow-400 text-black'
-          }`}
-          onClick={() => setSelectedSkills('programming')}
-        >
-          Programming
-        </button>
-        <button
-          className={`px-3 py-1 border-2 border-yellow-400 rounded-md ${
-            selectedSkills === 'tools' && 'bg-yellow-400 text-black'
-          }`}
-          onClick={() => setSelectedSkills('tools')}
-        >
-          Tools
-        </button>
-        <button
-          className={`px-3 py-1 border-2 border-yellow-400 rounded-md ${
-            selectedSkills === 'language' && 'bg-yellow-400 text-black'
-          }`}
-          onClick={() => setSelectedSkills('language')}
-        >
-          Language
-        </button>
+        {Object.keys(skills)?.map((skill) => (
+          <SkillsSelectionButton
+            key={skill}
+            selectedSkills={selectedSkills}
+            setSelectedSkills={setSelectedSkills}
+            skill={skill}
+          />
+        ))}
       </div>
-      {selectedSkills === 'web' && <SkillsTemplate skills={skills.webSkills} />}
+      {selectedSkills === 'web' && <SkillsTemplate skills={skills.web} />}
       {selectedSkills === 'programming' && (
-        <SkillsTemplate skills={skills.programmingSkills} />
+        <SkillsTemplate skills={skills.programming} />
       )}
-      {selectedSkills === 'tools' && (
-        <SkillsTemplate skills={skills.toolsSkills} />
-      )}
+      {selectedSkills === 'tools' && <SkillsTemplate skills={skills.tools} />}
       {selectedSkills === 'language' && (
-        <SkillsTemplate skills={skills.languageSkills} />
+        <SkillsTemplate skills={skills.language} />
       )}
+
       <Link
         href='/skills'
         className='text-lg text-yellow-400 hover:underline lg:absolute lg:bottom-0'
