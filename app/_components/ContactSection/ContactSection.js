@@ -7,7 +7,7 @@ import Link from 'next/link';
 
 const ContactSection = () => {
   return (
-    <section className='lg:px-20 px-2 mt-6'>
+    <section className='lg:px-20 px-2 my-6'>
       <h2 className='text-2xl border-b-2 border-yellow-400 w-fit mx-auto'>
         Contact
       </h2>
@@ -52,7 +52,7 @@ const ContactSection = () => {
         href='/contact'
         className='text-yellow-400 hover:underline text-lg block w-fit mx-auto mt-3'
       >
-        Find more contact info
+        More about contact info
       </Link>
     </section>
   );
