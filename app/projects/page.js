@@ -31,7 +31,7 @@ const Projects = async ({ from }) => {
       {from === 'homepage' && (
         <Link
           href='/projects'
-          className='block bg-slate-700 text-yellow-400 hover:bg-slate-600 hover:underline lg:px-12 px-6 py-3 w-fit mx-auto mt-3 rounded-lg capitalize'
+          className='block bg-slate-700 text-yellow-400 hover:bg-slate-600 lg:px-12 px-6 py-3 w-fit mx-auto mt-3 rounded-lg capitalize'
         >
           View all projects
         </Link>

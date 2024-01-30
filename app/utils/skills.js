@@ -57,6 +57,10 @@ const skills = {
     {
       skillName: 'Hindi',
       percentage: '50%'
+    },
+    {
+      skillName: 'عَرَبِيًّا (Arabic)',
+      percentage: '30%'
     }
   ]
 };

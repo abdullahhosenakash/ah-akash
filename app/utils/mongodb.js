@@ -11,4 +11,5 @@ const client = new MongoClient(process.env.MONGODB_URI, {
 await client.connect();
 const db = client.db('ahAkashPortfolio');
 const projectsCollection = db.collection('projects');
-export default projectsCollection;
+const collection = { projectsCollection };
+export default collection;

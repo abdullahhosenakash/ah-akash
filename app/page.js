@@ -2,6 +2,7 @@ import AboutSection from '@/app/_components/AboutSection/AboutSection';
 import Banner from '@/app/_components/Banner/Banner';
 import SkillsSection from '@/app/_components/SkillsSection/SkillsSection';
 import Projects from '@/app/projects/page';
+import ContactSection from './_components/ContactSection/ContactSection';
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
         <SkillsSection />
       </section>
       <Projects from='homepage' />
+      <ContactSection />
     </main>
   );
 }
