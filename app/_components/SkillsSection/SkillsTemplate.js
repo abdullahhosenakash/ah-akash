@@ -1,17 +1,22 @@
+import noorehuda from '@/app/_lib/getFont';
+
 const SkillsTemplate = ({ skills }) => {
   return (
     <div className='h-[21.6rem] lg:h-fit lg:border-0 border border-yellow-400 rounded-md p-2 lg:p-0 mt-2 lg:mt-0'>
       <div className='grid grid-cols-1 lg:grid-cols-2 gap-3 lg:mt-2'>
         {skills?.map((skill) => (
           <div
-            className='flex flex-col relative gap-3 p-4 bg-slate-700 rounded-md'
+            className={`flex flex-col relative gap-3 bg-slate-700 rounded-md ${
+              skill.skillName === 'عَرَبِيًّا (Arabic)'
+                ? 'px-4 py-3 justify-between'
+                : 'p-4'
+            }`}
             key={skill.skillName}
           >
-            <div className='flex justify-between'>
-              {/* <span>{skill.skillName}</span> */}
+            <div className='flex justify-between items-center'>
               {skill.skillName === 'عَرَبِيًّا (Arabic)' ? (
                 <span className=''>
-                  <span className='text-xl'>
+                  <span className={`text-2xl ${noorehuda.className}`}>
                     {skill.skillName.split(' ')[0]}
                   </span>
                   <span className=''>{skill.skillName.split(' ')[1]}</span>

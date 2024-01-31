@@ -17,7 +17,7 @@ const Projects = async ({ from }) => {
   return (
     <section
       className={`lg:px-20 px-2 lg:mt-6 mt-3 mb-6 ${
-        from === 'homepage' && 'lg:mt-10'
+        from === 'homepage' && 'lg:mt-10 mt-10'
       }`}
     >
       <h2 className='text-2xl border-b-2 border-yellow-400 w-fit mx-auto'>

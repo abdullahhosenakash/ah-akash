@@ -1,16 +1,22 @@
 import '@/app/globals.css';
 import Navbar from '@/app/_components/NavBar/Navbar';
-import Footer from './_components/Footer/Footer';
+import Footer from '@/app/_components/Footer/Footer';
+import localFont from 'next/font/local';
 
 export const metadata = {
   title: 'Abdullah Hosen Akash',
   description: 'Full Stack Web Developer'
 };
 
+const consolas = localFont({
+  src: '../public/consolas.ttf',
+  display: 'swap'
+});
+
 export default function RootLayout({ children }) {
   return (
     <html lang='en'>
-      <body>
+      <body className={consolas.className}>
         <Navbar />
         {children}
         <Footer />

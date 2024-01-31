@@ -15,7 +15,10 @@ const AboutSection = () => {
         Science and Technology University, Dinajpur in 2024. I am always free
         for any kind of job opportunity that suits my interests.
       </p>
-      <Link href='/about' className='text-lg text-yellow-400 hover:underline'>
+      <Link
+        href='/about'
+        className='text-lg text-yellow-400 hover:underline block w-fit lg:mx-0 mx-auto'
+      >
         More about me
       </Link>
     </section>

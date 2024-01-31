@@ -3,7 +3,7 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import SkillsTemplate from '@/app/_components/SkillsSection/SkillsTemplate';
-import SkillsSelectionButton from './SkillsSelectionButton';
+import SkillsSelectionButton from '@/app/_components/SkillsSection/SkillsSelectionButton';
 import skills from '@/app/utils/skills';
 
 const SkillsSection = () => {
@@ -35,7 +35,7 @@ const SkillsSection = () => {
 
       <Link
         href='/skills'
-        className='text-lg text-yellow-400 hover:underline lg:absolute lg:bottom-0'
+        className='text-lg text-yellow-400 hover:underline lg:absolute lg:bottom-0  block mx-auto text-center'
       >
         More about my skills
       </Link>
