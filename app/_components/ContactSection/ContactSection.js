@@ -1,13 +1,9 @@
-import facebookIcon from '@/public/facebook.png';
-import linkedInIcon from '@/public/linkedin.png';
-import githubIcon from '@/public/github.png';
-import gmailIcon from '@/public/gmail.png';
-import Image from 'next/image';
 import Link from 'next/link';
+import SocialContacts from '@/app/_components/ContactSection/SocialContacts';
 
 const ContactSection = () => {
   return (
-    <section className='lg:px-20 px-2 my-6'>
+    <section className='lg:px-20 px-3 my-6'>
       <h2 className='text-2xl border-b-2 border-yellow-400 w-fit mx-auto'>
         Contact
       </h2>
@@ -19,33 +15,7 @@ const ContactSection = () => {
         </p>
         <div className='flex lg:flex-row flex-col lg:gap-4 gap-1 justify-center items-center mt-4'>
           <div className='text-lg'>Find me on:</div>
-          <div className='flex gap-4 items-center'>
-            <Link
-              href='https://www.facebook.com/abdullahhosen.akash'
-              target='_blank'
-            >
-              <Image src={facebookIcon} alt='facebook' className='w-8' />
-            </Link>
-
-            <Link
-              href='https://www.linkedin.com/in/md-abdullah-hosen'
-              target='_blank'
-            >
-              <Image src={linkedInIcon} alt='linked' className='w-8' />
-            </Link>
-
-            <Link href='https://github.com/abdullahhosenakash' target='_blank'>
-              <Image
-                src={githubIcon}
-                alt='github'
-                className='w-8 bg-white rounded'
-              />
-            </Link>
-
-            <Link href='mailto:abdullahhosenakash@gmail.com' target='_blank'>
-              <Image src={gmailIcon} alt='telegram' className='w-8' />
-            </Link>
-          </div>
+          <SocialContacts />
         </div>
       </div>
       <Link
