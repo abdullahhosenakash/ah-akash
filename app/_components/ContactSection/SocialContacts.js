@@ -1,10 +1,10 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import facebookIcon from '@/public/facebook.png';
-import linkedInIcon from '@/public/linkedin.png';
-import githubIcon from '@/public/github.png';
-import gmailIcon from '@/public/gmail.png';
-import twitterIcon from '@/public/twitter.png';
+import facebookIcon from '@/app/_assets/icons/facebook.png';
+import linkedInIcon from '@/app/_assets/icons/linkedin.png';
+import githubIcon from '@/app/_assets/icons/github.png';
+import gmailIcon from '@/app/_assets/icons/gmail.png';
+import twitterIcon from '@/app/_assets/icons/twitter.png';
 
 const SocialContacts = () => {
   return (

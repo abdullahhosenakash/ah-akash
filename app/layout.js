@@ -9,7 +9,7 @@ export const metadata = {
 };
 
 const consolas = localFont({
-  src: '../public/consolas.ttf',
+  src: '../app/_assets/fonts/consolas.ttf',
   display: 'swap'
 });
 
