@@ -23,11 +23,7 @@ const About = () => {
           performant interfaces for my clients.
         </p>
         <div className='lg:w-1/4'>
-          <Image
-            src={ahAkash}
-            alt=''
-            className='rounded-xl grayscale hover:grayscale-0 transition'
-          />
+          <Image src={ahAkash} alt='' className='rounded-xl' priority />
         </div>
       </div>
 
