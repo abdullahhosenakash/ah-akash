@@ -9,7 +9,7 @@ const Skills = () => {
   const [selectedSkills, setSelectedSkills] = useState('web');
 
   return (
-    <section className='lg:px-20 lg:mt-6 m-3 mb-6 lg:h-screen'>
+    <section className='lg:px-20 lg:mt-6 m-3 lg:h-[105vh]'>
       <h3 className='text-2xl border-b-2 border-yellow-400 w-fit mx-auto'>
         My Skills
       </h3>

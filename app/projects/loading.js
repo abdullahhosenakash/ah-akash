@@ -1,7 +1,7 @@
 const LoadingProjects = () => {
   return (
     <div>
-      <h2 className='text-center text-3xl mt-6'>Loading Projects</h2>
+      <h2 className='text-center text-3xl mt-6 h-screen'>Loading Projects</h2>
     </div>
   );
 };

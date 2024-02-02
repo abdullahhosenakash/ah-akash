@@ -10,7 +10,7 @@ const skills = {
       skillName: 'Next.JS',
       percentage: '40%',
       description:
-        'I am pretty beginner in Next.JS. I am learning this technology and already done some projects using this. Actually this full stack portfolio website also developed using Next.JS. I am really falling in love with the beauty of the beautiful React JS framework. This is so easy and I am learning everyday.'
+        'I am pretty beginner in Next.JS. I am learning this web technology and already done some projects using it. Actually this full stack portfolio website also developed using Next.JS. I am really falling in love with the beauty of the beautiful React JS framework. This is so easy and I am learning everyday.'
     },
     {
       skillName: 'Express JS',
