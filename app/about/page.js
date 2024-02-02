@@ -14,8 +14,9 @@ const About = () => {
         Wanna know about me?
       </h3>
 
+      {/* personal info */}
       <div className='flex lg:flex-row flex-col-reverse lg:gap-4 gap-3 items-center lg:w-3/4 mx-auto lg:mt-6 mt-3 lg:text-lg'>
-        <p className='text-justify lg:w-3/4'>
+        <p className='lg:text-justify text-center lg:w-3/4'>
           I am Abdullah Hosen Akash, a full stack web developer based in
           Jashore, Bangladesh. I have been building stuff on the web since 2022
           and done many projects based on frontend, backend and full Stack
@@ -27,13 +28,14 @@ const About = () => {
         </div>
       </div>
 
-      <div className='lg:w-3/4 mx-auto text-justify lg:mt-6 mt-3'>
+      <div className='lg:w-3/4 mx-auto lg:mt-6 mt-3'>
+        {/* Academic Carrier */}
         <div>
           <h3 className='text-2xl border-b-2 border-yellow-400 w-fit mx-auto'>
             Academic Carrier
           </h3>
           <div className='flex lg:flex-row-reverse flex-col-reverse lg:gap-4 gap-3 items-center mx-auto lg:text-lg'>
-            <p className='lg:text-lg'>
+            <p className='lg:text-lg lg:text-justify text-center'>
               In the case of academic role, I have completed my graduation with
               the degree of{' '}
               <span className='italic'>
@@ -63,12 +65,13 @@ const About = () => {
           </div>
         </div>
 
+        {/* Professional Role */}
         <div>
           <h3 className='text-2xl border-b-2 border-yellow-400 w-fit mx-auto lg:mt-6 mt-3'>
             Professional Role
           </h3>
           <div className='flex lg:flex-row flex-col-reverse lg:gap-4 gap-3 items-center mx-auto lg:text-lg'>
-            <p className='lg:text-lg'>
+            <p className='lg:text-lg lg:text-justify text-center'>
               As a fresh web developer, I am currently working for self
               development for the new era. Besides in offline, I usually teach
               some students as a private tutor. I love to teach others what I
@@ -80,12 +83,13 @@ const About = () => {
           </div>
         </div>
 
+        {/* Pastimes */}
         <div>
           <h3 className='text-2xl border-b-2 border-yellow-400 w-fit mx-auto lg:mt-6 mt-3'>
             Pastimes
           </h3>
           <div className='flex lg:flex-row-reverse flex-col-reverse lg:gap-4 gap-3 items-center mx-auto lg:text-lg'>
-            <p className='lg:text-lg'>
+            <p className='lg:text-lg lg:text-justify text-center'>
               It is very hard for human beings to write code all the times. I am
               not any other beings (LOL). I like to spend time with my family
               and make fun with my family members. Furthermore, I love having
@@ -97,6 +101,7 @@ const About = () => {
           </div>
         </div>
 
+        {/* Virtual Life */}
         <div>
           <h3 className='text-2xl border-b-2 border-yellow-400 w-fit mx-auto lg:mt-6 mt-3'>
             Virtual Life
