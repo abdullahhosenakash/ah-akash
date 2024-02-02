@@ -4,7 +4,7 @@ import { useState } from 'react';
 import Link from 'next/link';
 import SkillsTemplate from '@/app/_components/SkillsSection/SkillsTemplate';
 import SkillsSelectionButton from '@/app/_components/SkillsSection/SkillsSelectionButton';
-import skills from '@/app/utils/skills';
+import skills from '@/app/_utils/skills';
 
 const SkillsSection = () => {
   const [selectedSkills, setSelectedSkills] = useState('web');
@@ -24,13 +24,15 @@ const SkillsSection = () => {
           />
         ))}
       </div>
-      {selectedSkills === 'web' && <SkillsTemplate skills={skills.web} />}
+      {selectedSkills === 'web' && <SkillsTemplate skillType={skills.web} />}
       {selectedSkills === 'programming' && (
-        <SkillsTemplate skills={skills.programming} />
+        <SkillsTemplate skillType={skills.programming} />
       )}
-      {selectedSkills === 'tools' && <SkillsTemplate skills={skills.tools} />}
+      {selectedSkills === 'tools' && (
+        <SkillsTemplate skillType={skills.tools} />
+      )}
       {selectedSkills === 'language' && (
-        <SkillsTemplate skills={skills.language} />
+        <SkillsTemplate skillType={skills.language} />
       )}
 
       <Link

@@ -19,7 +19,7 @@ const About = () => {
         <p className='lg:text-justify text-center lg:w-3/4'>
           I am Abdullah Hosen Akash, a full stack web developer based in
           Jashore, Bangladesh. I have been building stuff on the web since 2022
-          and done many projects based on frontend, backend and full Stack
+          and done many projects based on frontend, backend and full stack
           technologies. My focus is on creating engaging, accessible &
           performant interfaces for my clients.
         </p>

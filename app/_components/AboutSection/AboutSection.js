@@ -8,7 +8,7 @@ const AboutSection = () => {
       </h3>
       <p className='text-justify text-lg mt-2'>
         I am Abdullah Hosen Akash, a passionate web developer. I develop web
-        applications using JavaScript as my core skill is based on it. As a
+        applications using JavaScript, as my core skill is based on it. As a
         JavaScript developer, I like to do most of the task i.e. frontend,
         backend using JS. I have graduated with a bachelor&apos;s degree in
         Electronic and Communication Engineering from Hajee Mohammad Danesh

@@ -1,10 +1,42 @@
 import noorehuda from '@/app/_lib/getFont';
+import skills from '@/app/_utils/skills';
+import Link from 'next/link';
 
-const SkillsTemplate = ({ skills }) => {
+const SkillsTemplate = ({ skillType, from = '' }) => {
+  const [english1, arabic1, english2, arabic2, english3, arabic3, english4] =
+    skills?.language[3]?.description?.split('~');
+  const [git1, git2] = skills?.tools[0]?.description?.split('~');
+  const arabicDescription = (
+    <>
+      <span className=''>{english1}</span>
+      <span className={`text-2xl ${noorehuda.className}`}>{arabic1}</span>
+      <span className=''>{english2}</span>
+      <span className={`text-2xl ${noorehuda.className}`}>{arabic2}</span>
+      <span className=''>{english3}</span>
+      <span className={`text-2xl ${noorehuda.className}`}>{arabic3}</span>
+      <span className=''>{english4}</span>
+    </>
+  );
+  const gitDescription = (
+    <>
+      <span className=''>{git1}</span>
+      <Link
+        href='https://www.github.com/abdullahhosenakash'
+        target='_blank'
+        className='text-yellow-400 hover:underline'
+      >
+        {git2}
+      </Link>
+    </>
+  );
   return (
-    <div className='h-[21.6rem] lg:h-fit lg:border-0 border border-yellow-400 rounded-md p-2 lg:p-0 mt-2 lg:mt-0'>
+    <div
+      className={`h-[21.6rem] lg:h-fit lg:border-0 border border-yellow-400 rounded-md p-2 lg:p-0 mt-2 lg:mt-0 ${
+        from === 'skillsPage' && 'h-full border-0 p-0'
+      }`}
+    >
       <div className='grid grid-cols-1 lg:grid-cols-2 gap-3 lg:mt-2'>
-        {skills?.map((skill) => (
+        {skillType?.map((skill) => (
           <div
             className={`flex flex-col relative gap-3 bg-slate-700 rounded-md ${
               skill.skillName === 'عَرَبِيًّا (Arabic)'
@@ -26,6 +58,7 @@ const SkillsTemplate = ({ skills }) => {
               )}
               <span>{skill.percentage}</span>
             </div>{' '}
+            {from === 'skillsPage' && <hr />}
             <div
               className={`${
                 skill.percentage === '30%'
@@ -61,6 +94,15 @@ const SkillsTemplate = ({ skills }) => {
                   : ''
               } absolute bottom-0 left-0 border-b-8 border-yellow-400 rounded-lg`}
             />
+            {from === 'skillsPage' && (
+              <p className='text-slate-300 p-1'>
+                {skill.skillName === 'Git'
+                  ? gitDescription
+                  : skill.skillName === 'عَرَبِيًّا (Arabic)'
+                  ? arabicDescription
+                  : skill.description}
+              </p>
+            )}
           </div>
         ))}
       </div>
