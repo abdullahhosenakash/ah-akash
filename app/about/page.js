@@ -5,6 +5,8 @@ import ahAkash from '@/app/_assets/images/ah-akash.jpg';
 import educationIcon from '@/app/_assets/icons/education.png';
 import workerIcon from '@/app/_assets/icons/worker.png';
 import pastimesIcon from '@/app/_assets/icons/pastimes.png';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faGraduationCap } from '@fortawesome/free-solid-svg-icons';
 
 const About = () => {
   return (
@@ -24,7 +26,12 @@ const About = () => {
           performant interfaces for my clients.
         </p>
         <div className='lg:w-1/4'>
-          <Image src={ahAkash} alt='' className='rounded-xl' priority />
+          <Image
+            src={ahAkash}
+            alt='ah-akash image'
+            className='rounded-xl'
+            priority
+          />
         </div>
       </div>
 
@@ -56,10 +63,14 @@ const About = () => {
               changed to be a professional one.
             </p>
             <div className='w-full lg:mt-0 mt-3'>
-              <Image
+              {/* <Image
                 src={educationIcon}
                 alt=''
                 className='rounded-xl mx-auto'
+              /> */}
+              <FontAwesomeIcon
+                icon={faGraduationCap}
+                className='text-[8rem] block mx-auto w-[100%]'
               />
             </div>
           </div>

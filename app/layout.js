@@ -1,7 +1,9 @@
 import '@/app/globals.css';
 import Navbar from '@/app/_components/NavBar/Navbar';
-import Footer from '@/app/_components/Footer/Footer';
 import localFont from 'next/font/local';
+import Header from '@/app/_components/NavBar/Header';
+import { config } from '@fortawesome/fontawesome-svg-core';
+config.autoAddCss = false;
 
 export const metadata = {
   title: 'Abdullah Hosen Akash',
@@ -16,10 +18,11 @@ const consolas = localFont({
 export default function RootLayout({ children }) {
   return (
     <html lang='en'>
-      <body className={consolas.className}>
-        <Navbar />
+      <body className={`pb-20 ${consolas.className}`}>
+        <Header>
+          <Navbar />
+        </Header>
         {children}
-        <Footer />
       </body>
     </html>
   );
